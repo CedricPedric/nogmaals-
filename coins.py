@@ -18,7 +18,7 @@ if change > 0: # Als er wissel geld is groter dan 0 is het True
     if nrCoins > 0: # Als het aantal munten groter is dan 0 voert het dit stuk uit
       print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) #Print uit de nr coins en de coin value
       nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) 
-      amount = amount + " Aantal: " + str(nrCoinsReturned) +" munten van de waarde " + str(coinValue) + " cent " # Berekening van het gebruikte muntstukkken.
+      amount = amount + " Aantal: " + str(nrCoinsReturned) +" munten van de waarde " + str(coinValue) + " cent " + "\n" # Berekening van het gebruikte muntstukkken.
       change -= nrCoinsReturned * coinValue # Subtracts the value on the right from the value on the left. Then it assigns it to the expression on the left.
 # comment on code below: Dit is een checklist als de value 500 gaat die naar 300 dan naar 200 enz. 
     if coinValue == 500:
@@ -42,6 +42,7 @@ if change > 0: # Als er wissel geld is groter dan 0 is het True
 
 if change > 0: # Als er wisselgeld blijft print het progamma hoeveel er over is
   print('Change not returned: ', str(change) + ' cents')
+  print(str(amount))
   
 else:
   print('done')
